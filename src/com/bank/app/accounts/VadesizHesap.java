@@ -2,6 +2,8 @@ package com.bank.app.accounts;
 
 import com.bank.app.cards.KrediKarti;
 
+
+// bankahesabindan miras aldik
 public class VadesizHesap extends BankaHesabi {
     private String hesapTuru;
 

@@ -4,26 +4,27 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class BankaPersoneli extends Kisi {
+    
+    // Uml diyagramdaki beriltilen degiskenler
     private String personelID;
     private ArrayList<Musteri> musteriler;
 
-    // UML Diyagramındaki Constructor
+    // Uml diyagramdaki beriltilen constructor
     public BankaPersoneli(String ad, String soyad, String email, int telefonNumarasi) {
+        // superin kullanisi verileri kisi sinifina aktarmak icindir
         super(ad, soyad, email, telefonNumarasi);
         
         // personelID otomatik random türetiliyor
         Random rand = new Random();
+
+        // range : 1000 - 9999 ve sonuc hep string olacaktir
         this.personelID = "PERS-" + (rand.nextInt(9000) + 1000);
         
+        // object initialization
         this.musteriler = new ArrayList<>();
     }
 
-    // Getters ve Setters
-    public String getPersonelID() { return personelID; }
-    public void setPersonelID(String personelID) { this.personelID = personelID; }
-
-    public ArrayList<Musteri> getMusteriler() { return musteriler; }
-    public void setMusteriler(ArrayList<Musteri> musteriler) { this.musteriler = musteriler; }
+     // burda toString method overriding yapisi kullandik
 
     @Override
     public String toString() {
