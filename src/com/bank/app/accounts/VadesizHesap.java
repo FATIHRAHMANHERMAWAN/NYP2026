@@ -22,7 +22,7 @@ public class VadesizHesap extends BankaHesabi {
         if (gonderenHesap.getBakiye() >= miktar) {
             gonderenHesap.setBakiye(gonderenHesap.getBakiye() - miktar);
             aliciHesap.setBakiye(aliciHesap.getBakiye() + miktar);
-            System.out.println("Transfer başarılı. Miktar: " + miktar);
+            System.out.println("Transfer basarılı. Miktar: " + miktar);
         } else {
             System.out.println("Yetersiz bakiye. Transfer iptal edildi.");
         }

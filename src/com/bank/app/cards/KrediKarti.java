@@ -33,7 +33,6 @@ public class KrediKarti {
         return kartNumarasi; 
     }
     
-    
     public double getLimit() {
         return limit;
     }

@@ -61,11 +61,11 @@ public class Musteri extends Kisi {
         // silme kurali hesabin her hangi bir bakiye olmamasidir
 
         if (hesap.getBakiye() > 0) {
-            System.out.println("Lütfen öncelikle bakiyenizi başka bir hesaba aktarınız.");
+            System.out.println("Lütfen öncelikle bakiyenizi baska bir hesaba aktarınız.");
         } else {
             // remove() bir ArrayList functiondur
             hesaplar.remove(hesap);
-            System.out.println("Hesap başarıyla silindi.");
+            System.out.println("Hesap basarıyla silindi.");
         }
     }
 
@@ -78,13 +78,25 @@ public class Musteri extends Kisi {
 
             // remove() bir ArrayList functiondur
             krediKartlari.remove(kart);
-            System.out.println("Kredi kartı başarıyla silindi.");
+            System.out.println("Kredi kartı basarıyla silindi.");
         }
     }
 
+    //getter methodlar
+
+    public ArrayList<BankaHesabi> getHesaplar() {
+
+         return hesaplar;
+
+     }
+
+     public ArrayList<KrediKarti> getKrediKartlari() {
+
+         return krediKartlari;
+
+     }
    
      // burda toString method overriding yapisi kullandik
-
 
     @Override
     public String toString() {

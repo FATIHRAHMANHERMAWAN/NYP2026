@@ -14,7 +14,7 @@ public class BankaService {
     // menambahkan object musteri kedalam sistemdekimusteriler arraylist
     public void musteriEkle(Musteri m) {
         sistemdekiMusteriler.add(m);
-        System.out.println("Yeni müşteri sisteme eklendi: " + m.getAd() + " " + m.getSoyad());
+        System.out.println("Yeni müsteri sisteme eklendi: " + m.getAd() + " " + m.getSoyad());
     }
 
     //getter method sistemdeki musteriler icin
