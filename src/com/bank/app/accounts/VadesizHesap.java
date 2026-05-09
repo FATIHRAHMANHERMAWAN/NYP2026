@@ -10,7 +10,7 @@ public class VadesizHesap extends BankaHesabi {
     // UML Diyagramındaki Constructor
     public VadesizHesap(double bakiye) {
         super(bakiye);
-        this.hesapTuru = "Vadesiz";
+       hesapTuru = "Vadesiz";
     }
 
 
@@ -31,7 +31,7 @@ public class VadesizHesap extends BankaHesabi {
     //kredi karti bord odeme yontemi
     public void krediKartiBorcOdeme(KrediKarti kart, double miktar) {
         if (this.getBakiye() >= miktar) {
-            this.setBakiye(this.getBakiye() - miktar);
+           setBakiye(this.getBakiye() - miktar);
             kart.setGuncelBorc(kart.getGuncelBorc() - miktar);
 
             // Kullanılabilir limit güncelleniyoruz tabiki
@@ -42,8 +42,6 @@ public class VadesizHesap extends BankaHesabi {
         }
     }
 
-    // public String getHesapTuru() { return hesapTuru; }
-    // public void setHesapTuru(String hesapTuru) { this.hesapTuru = hesapTuru; }
 
     @Override
     public String toString() {

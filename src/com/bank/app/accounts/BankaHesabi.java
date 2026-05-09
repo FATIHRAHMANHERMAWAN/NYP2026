@@ -19,7 +19,7 @@ public class BankaHesabi {
             //0-9 sayilar gelecektir
             sb.append(rand.nextInt(10));
         }
-        this.iban = sb.toString();
+        iban = sb.toString();
     }
 
     // bu getter fuctionlar musteri sinifinda kullanilmistir

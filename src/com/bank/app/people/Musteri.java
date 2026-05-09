@@ -25,11 +25,11 @@ public class Musteri extends Kisi {
         
          // range : 1000 - 9999 ve sonuc hep string olacaktir
         Random rand = new Random();
-        this.musteriNumarasi = String.valueOf(rand.nextInt(900000) + 100000); // 6 haneli
+        musteriNumarasi = String.valueOf(rand.nextInt(900000) + 100000); // 6 haneli
         
         // object initialization 
-        this.hesaplar = new ArrayList<>();
-        this.krediKartlari = new ArrayList<>();
+        hesaplar = new ArrayList<>();
+        krediKartlari = new ArrayList<>();
     }
 
     // hesapturune gore siniflandirim ilgili nesne yaratmak

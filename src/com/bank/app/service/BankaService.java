@@ -9,7 +9,7 @@ public class BankaService {
     private ArrayList<Musteri> sistemdekiMusteriler;
 
     public BankaService() {
-        this.sistemdekiMusteriler = new ArrayList<>();
+        sistemdekiMusteriler = new ArrayList<>();
     }
     // menambahkan object musteri kedalam sistemdekimusteriler arraylist
     public void musteriEkle(Musteri m) {

@@ -18,10 +18,10 @@ public class BankaPersoneli extends Kisi {
         Random rand = new Random();
 
         // range : 1000 - 9999 ve sonuc hep string olacaktir
-        this.personelID = "PERS-" + (rand.nextInt(9000) + 1000);
+        personelID = "PERS-" + (rand.nextInt(9000) + 1000);
         
         // object initialization
-        this.musteriler = new ArrayList<>();
+        musteriler = new ArrayList<>();
     }
 
      // burda toString method overriding yapisi kullandik

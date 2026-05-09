@@ -17,12 +17,12 @@ public class KrediKarti {
         this.guncelBorc = guncelBorc;
 
         // kullanilabilir limit ifadesi = limit - guncelborc
-        this.kullanilabilirLimit = limit - guncelBorc;
+        kullanilabilirLimit = limit - guncelBorc;
         
         // kartNumarasi otomatik random türetiliyor 16 haneli
         // " - " bir ayrac kulanilir. %d04d sonucu hep 0000 olacaktir
         Random rand = new Random();
-        this.kartNumarasi = String.format("%04d-%04d-%04d-%04d", 
+        kartNumarasi = String.format("%04d-%04d-%04d-%04d", 
             rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000));
     }
 
@@ -43,7 +43,7 @@ public class KrediKarti {
     }
     public void setGuncelBorc(double guncelBorc) { 
         this.guncelBorc = guncelBorc; 
-        this.kullanilabilirLimit = this.limit - guncelBorc; // Borç değişirse güncellenir
+        kullanilabilirLimit = this.limit - guncelBorc; // Borç değişirse güncellenir
     }
 
     public void setKullanilabilirLimit(double kullanilabilirLimit) {
