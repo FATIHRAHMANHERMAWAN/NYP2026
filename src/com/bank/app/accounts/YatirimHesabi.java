@@ -9,8 +9,11 @@ public class YatirimHesabi extends BankaHesabi {
         this.hesapTuru = "Yatirim";
     }
 
+
+    // para ekleme sistemi
     public void paraEkle(double miktar) {
         if (miktar > 0) {
+            // bursa super() kullanmadik nedenide override kullanmadik
             this.setBakiye(this.getBakiye() + miktar);
             System.out.println("Yatırım hesabına " + miktar + " eklendi.");
         }
@@ -25,8 +28,8 @@ public class YatirimHesabi extends BankaHesabi {
         }
     }
 
-    public String getHesapTuru() { return hesapTuru; }
-    public void setHesapTuru(String hesapTuru) { this.hesapTuru = hesapTuru; }
+    // public String getHesapTuru() { return hesapTuru; }
+    // public void setHesapTuru(String hesapTuru) { this.hesapTuru = hesapTuru; }
 
     @Override
     public String toString() {
