@@ -102,6 +102,6 @@ public class Musteri extends Kisi {
     public String toString() {
 
         // bursa ana sinifindaki toString cagirdik 
-        return super.toString() + ", Müşteri No: " + musteriNumarasi;
+        return super.toString() + ", Müsteri No: " + musteriNumarasi;
     }
 }
