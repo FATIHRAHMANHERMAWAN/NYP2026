@@ -37,6 +37,7 @@ public class Musteri extends Kisi {
 
         // equals yerine equalsIgnoreCase kullandik amaci buyuk kucuk farketmemek
         // add function ArrayList bir ozelligidir (eklemek)
+        
         if (hesapTuru.equalsIgnoreCase("Vadesiz")) {
             hesaplar.add(new VadesizHesap(0.0));
             System.out.println("Vadesiz hesap eklendi.");
