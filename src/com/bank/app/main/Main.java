@@ -10,6 +10,8 @@ import com.bank.app.cards.KrediKarti;
 
 public class Main {
     public static void main(String[] args) {
+
+
         System.out.println("--- Sistem basladi  ---\n");
 
         // musteri olusturma
@@ -36,7 +38,7 @@ public class Main {
 
         // 3. Hesaba para yatırma (Yatırım Hesabı üzerinden test)
         System.out.println("[3] HESABA PARA YATIRILIYOR...");
-        ((YatirimHesabi) aliYatirim).paraEkle(5000.0);
+        aliYatirim.paraEkle(5000.0);
         aliVadesiz.setBakiye(2000.0); // Test amaçlı bakiye ataması
         System.out.println("Ali Vadesiz Bakiye: " + aliVadesiz.getBakiye());
         System.out.println();
@@ -44,7 +46,7 @@ public class Main {
         // 4. Hesaplar arasında para transferi gerçekleStirme
         System.out.println("[4] PARA TRANSFERI...");
         // Ali, fatih 'ye 500 TL gönderiyor
-        ((VadesizHesap) aliVadesiz).paraTransferi(fatihVadesiz, aliVadesiz, 500.0);
+        aliVadesiz.paraTransferi(fatihVadesiz, aliVadesiz, 500.0);
         System.out.println("Ali Kalan Bakiye: " + aliVadesiz.getBakiye());
         System.out.println("Fatih Yeni Bakiye: " + fatihVadesiz.getBakiye() + "\n");
 
@@ -59,7 +61,7 @@ public class Main {
 
         // 6. Kredi kartı borcu ödeme iSlemi yapma
         System.out.println("[6] KREDI KARTI BORCU ÖDEME...");
-        ((VadesizHesap) aliVadesiz).krediKartiBorcOdeme(aliKart, 500.0);
+        aliVadesiz.krediKartiBorcOdeme(aliKart, 500.0);
         System.out.println("Ali Kart Kalan Borç: " + aliKart.getGuncelBorc());
         System.out.println("Ali Vadesiz Kalan Bakiye: " + aliVadesiz.getBakiye() + "\n");
 

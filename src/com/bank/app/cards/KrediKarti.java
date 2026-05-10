@@ -1,11 +1,8 @@
 package com.bank.app.cards;
-
 import java.util.Random;
 
 public class KrediKarti {
-
     // Uml diyagramdaki beriltilen degiskenler
-
     private String kartNumarasi;
     private double limit;
     private double guncelBorc;
@@ -25,18 +22,13 @@ public class KrediKarti {
         kartNumarasi = String.format("%04d-%04d-%04d-%04d", 
             rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000));
     }
-
     // bu getter fuctionlar musteri, accountlar sinifinda kullanilmistir
-
     public String getKartNumarasi() { 
-
         return kartNumarasi; 
     }
-    
     public double getLimit() {
         return limit;
     }
-
     public double getGuncelBorc() { 
 
         return guncelBorc; 
@@ -45,14 +37,10 @@ public class KrediKarti {
         this.guncelBorc = guncelBorc; 
         kullanilabilirLimit = this.limit - guncelBorc; // Borç değişirse güncellenir
     }
-
     public void setKullanilabilirLimit(double kullanilabilirLimit) {
         this.kullanilabilirLimit = kullanilabilirLimit;
     }
-    
-
      // burda toString method overriding yapisi kullandik
-
     @Override
     public String toString() {
         return "Kart No: " + kartNumarasi + ", Limit: " + limit + ", Borç: " + guncelBorc;

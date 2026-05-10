@@ -2,6 +2,8 @@ package com.bank.app.accounts;
 
 import java.util.Random;
 
+import com.bank.app.cards.KrediKarti;
+
 public class BankaHesabi {
 
      // UML Diyagramındaki degiskenler
@@ -20,6 +22,22 @@ public class BankaHesabi {
             sb.append(rand.nextInt(10));
         }
         iban = sb.toString();
+    }
+
+    public void paraEkle(double miktar) {
+        // Alt sınıflar burayı override edecek
+    }
+
+    public void paraCek(double miktar) {
+        // Alt sınıflar burayı override edecek
+    }
+
+    public void paraTransferi(BankaHesabi aliciHesap, BankaHesabi gonderenHesap, double miktar) {
+         // Alt sınıflar burayı override edecek
+    }
+
+    public void krediKartiBorcOdeme(KrediKarti kart, double miktar) {
+         // Alt sınıflar burayı override edecek
     }
 
     // bu getter fuctionlar musteri sinifinda kullanilmistir

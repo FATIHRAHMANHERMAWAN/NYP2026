@@ -11,6 +11,8 @@ public class YatirimHesabi extends BankaHesabi {
 
 
     // para ekleme sistemi
+
+     @Override
     public void paraEkle(double miktar) {
         if (miktar > 0) {
             // bursa super() kullanmadik nedenide override kullanmadik
@@ -19,6 +21,7 @@ public class YatirimHesabi extends BankaHesabi {
         }
     }
 
+     @Override
     public void paraCek(double miktar) {
         if (getBakiye() >= miktar) {
             setBakiye(getBakiye() - miktar);

@@ -68,36 +68,26 @@ public class Musteri extends Kisi {
             System.out.println("Hesap basarıyla silindi.");
         }
     }
-
     public void krediKartiSil(KrediKarti kart) {
         // silme kurali hesabin her hangi bir borc olmamasidir
-
         if (kart.getGuncelBorc() > 0) {
             System.out.println("Lütfen öncelikle borç ödemesi yapınız.");
         } else {
-
             // remove() bir ArrayList functiondur
             krediKartlari.remove(kart);
             System.out.println("Kredi kartı basarıyla silindi.");
         }
     }
-
     //getter methodlar
-
     public ArrayList<BankaHesabi> getHesaplar() {
-
          return hesaplar;
-
      }
-
      public ArrayList<KrediKarti> getKrediKartlari() {
 
          return krediKartlari;
 
      }
-   
      // burda toString method overriding yapisi kullandik
-
     @Override
     public String toString() {
 

@@ -1,7 +1,5 @@
 package com.bank.app.accounts;
-
 import com.bank.app.cards.KrediKarti;
-
 
 // bankahesabindan miras aldik
 public class VadesizHesap extends BankaHesabi {
@@ -12,10 +10,9 @@ public class VadesizHesap extends BankaHesabi {
         super(bakiye);
        hesapTuru = "Vadesiz";
     }
-
-
     // para transferi fongsyonu
 
+     @Override
     public void paraTransferi(BankaHesabi aliciHesap, BankaHesabi gonderenHesap, double miktar) {
 
         // eger gonderen hesabi esit veya daha fazla bakiye varsa, transfer islemi gerceklestirebilir
@@ -29,6 +26,8 @@ public class VadesizHesap extends BankaHesabi {
     }
 
     //kredi karti bord odeme yontemi
+
+    @Override
     public void krediKartiBorcOdeme(KrediKarti kart, double miktar) {
         if (this.getBakiye() >= miktar) {
            setBakiye(this.getBakiye() - miktar);
@@ -41,7 +40,6 @@ public class VadesizHesap extends BankaHesabi {
             System.out.println("Hesapta yeterli bakiye yok.");
         }
     }
-
 
     @Override
     public String toString() {
